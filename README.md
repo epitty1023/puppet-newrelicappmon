@@ -1,4 +1,4 @@
 puppet-newrelicappmon
 =====================
 
-Puppet Module to install New Relic App monitoring in Windows Servers
+Puppet Module to install New Relic .NET App monitoring in Windows Servers
