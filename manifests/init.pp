@@ -7,6 +7,7 @@ class newrelic-appmon(
    $msifile_source     = undef,
    $location           = undef
 ) {
+  #Get the variables through hiera
   #exe_name = "installnewrelic.ps1"
   #$psdisk = 'C:\scripts\installnewrelic.ps1'
   #location = "puppet:///modules/${module_name}/${exe_name}"
