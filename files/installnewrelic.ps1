@@ -1,7 +1,10 @@
 # add code to copy the msi here
-$msiName = "c:\scripts\NewRelicAgent_x86_3.4.24.0.msi"
-$licenseKey = "aaaaabbbbbbcccccdddddeeeeeffffggggghhhhh"
-# /L*v install.log means log verbose output to install.log | /qn means display no user interface
+param(
+ [string]$msiName,
+ [string]$licensekey
+ )
+#$msiName = "c:\scripts\NewRelicAgent_x86_3.4.24.0.msi"
+#$licenseKey = "aaaaabbbbbbcccccdddddeeeeeffffggggghhhhh"
 $arguments = "/i $msiName /L*v newrelicappmonitorinstall.log /qn NR_LICENSE_KEY=$licenseKey"
 if ($msiName -ne $null) {
     $exitCode = (Start-Process -FilePath "msiexec" -ArgumentList $arguments -Wait -PassThru).ExitCode;
